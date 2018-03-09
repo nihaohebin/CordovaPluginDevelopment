@@ -3,7 +3,10 @@
 //noinspection GradleDependency,GradleCompatible
 compile 'com.android.support:support-v4:23.1.1'
 //noinspection GradleDependency,GradleCompatible
-compile 'com.android.support:multidex:1.0.1'
+compile 'io.reactivex:rxjava:1.1.6'
+compile 'io.reactivex:rxandroid:1.2.1'
+//noinspection GradleDependency,GradleCompatible
+compile 'com.android.support:multidex:1.0.2'
 //角标
 compile 'me.leolin:ShortcutBadger:1.1.19@aar'
 //json解析
@@ -35,8 +38,6 @@ compile files('libs/umeng_social_tool.jar')
 //图像处理
 compile 'com.github.bumptech.glide:glide:3.8.0'
 compile files('libs/universal-image-loader-1.9.5.jar')
-//线程池
-compile files('libs/ThreadPoolHelp-2.0.jar')
 //二维码
 compile files('libs/zxing.jar')
 //讯飞语音
