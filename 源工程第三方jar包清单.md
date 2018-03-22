@@ -1,4 +1,4 @@
-#### 已有jar包
+#### 源工程已有jar包
 ```
 //noinspection GradleDependency,GradleCompatible
 compile 'com.android.support:support-v4:23.1.1'
@@ -47,3 +47,4 @@ compile files('libs/commons-io-2.6.jar')
 //TalkingData
 compile files('libs/SaaS_AppAnalytics_Android_SDK_V4.0.12.jar')
 ```
+供测试已有Jar包：[供测试已有Jar包下载](https://github.com/nihaohebin/CordovaPluginDevelopment/tree/master/app/libs)
