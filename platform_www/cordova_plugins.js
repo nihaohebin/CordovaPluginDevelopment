@@ -15,6 +15,14 @@ module.exports = [
     "clobbers": [
       "device"
     ]
+  },
+  {
+    "id": "cordova-plugin-image-picker.ImagePicker",
+    "file": "plugins/cordova-plugin-image-picker/www/imagepicker.js",
+    "pluginId": "cordova-plugin-image-picker",
+    "clobbers": [
+      "plugins.imagePicker"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -22,7 +30,8 @@ module.exports.metadata =
 {
   "cordova-plugin-whitelist": "1.3.3",
   "cordova-plugin-app-version": "0.1.9",
-  "cordova-plugin-device": "2.0.1"
+  "cordova-plugin-device": "2.0.1",
+  "cordova-plugin-image-picker": "1.1.1"
 };
 // BOTTOM OF METADATA
 });
