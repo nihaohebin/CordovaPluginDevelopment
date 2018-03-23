@@ -19,7 +19,7 @@ Android SDK 要求 Android 3.0 及以上版本 请使用 Java 7 或以上版本
 	     version="2.0.2">
 
 ```
-- 5、开发环境的**包名**要与打包平台创建的**包名**一致，以免一些.R文件因包名不一致，导致打包失败。
+- 5、开发环境的**包名**要与打包平台创建的**包名**一致，以免一些.R文件因包名不一致，导致打包失败。善用FakeR来动态导入R文件，例如[直接上代码，查看MultiImageChooserActivity使用方法](https://github.com/nihaohebin/CordovaPluginDevelopment/tree/master/app/src/main/java/com/synconset)
 - 6、开发自定义插件时，尽量将代码解耦出一个jar包，如图：
 
   ![](https://i.imgur.com/ljaxVLl.png)
