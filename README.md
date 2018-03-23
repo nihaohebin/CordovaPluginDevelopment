@@ -16,7 +16,7 @@ Android SDK 要求 Android 3.0 及以上版本 请使用 Java 7 或以上版本
 ```xml
      <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
              id="cordova-plugin-toone-camera"
-	             version="2.0.2">
+	     version="2.0.2">
 
 ```
 - 5、开发环境的**包名**要与打包平台创建的**包名**一致，以免一些.R文件因包名不一致，导致打包失败。
