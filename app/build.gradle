@@ -142,8 +142,8 @@ android {
         if (cdvMinSdkVersion != null) {
             minSdkVersion cdvMinSdkVersion
         }
-        minSdkVersion 21
-        targetSdkVersion 24
+        minSdkVersion 19
+        targetSdkVersion 27
     }
     sourceSets {
         main {
@@ -157,7 +157,7 @@ android {
     lintOptions {
         abortOnError false;
     }
-    compileSdkVersion 23
+    compileSdkVersion 27
     buildToolsVersion '27.0.0'
     //This code exists for Crosswalk and other Native APIs.
     //By default, we multiply the existing version code in the Android Manifest by 10 and
