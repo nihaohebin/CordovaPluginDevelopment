@@ -19,4 +19,4 @@
 [plugin.xml 配置查询](https://github.com/nihaohebin/CordovaPluginDevelopment/blob/master/%E6%8F%92%E4%BB%B6plugin%E9%85%8D%E7%BD%AE%E4%BB%8B%E7%BB%8D.md)
 - 2、config.xml文件详细配置介绍：
 [config.xml 配置查询](https://github.com/nihaohebin/CordovaPluginDevelopment/blob/master/%E6%8F%92%E4%BB%B6config%E9%85%8D%E7%BD%AE%E4%BB%8B%E7%BB%8D.md)
-- 3、java 和 js 文件详细开发介绍：[ java 和 js 详细开发文档](http://cordova.axuer.com/docs/zh-cn/latest/guide/platforms/android/plugin.html)
+- 3、java 和 js 文件详细开发介绍：[  java 和 js 详细开发文档](http://cordova.axuer.com/docs/zh-cn/latest/guide/platforms/android/plugin.html)

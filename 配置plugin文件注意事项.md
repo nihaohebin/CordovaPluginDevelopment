@@ -37,7 +37,15 @@
  <source-file src="libs/armeabi/libscrypt_crypho.so" target-dir="app/libs/armeabi/"/>
  <source-file src="libs/armeabi-v7a/libscrypt_crypho.so" target-dir="app/libs/armeabi-v7a/"/>
 ```
-- 4、仔细检查 source-file 无重复资源导入 如：
+- 总结：在配置source-file文件的target-dir路径时是以工程android为相对根目录的。在配置lib-file时是以app/libs为相对根目录如：
+```xml
+<!-- 最终插件安装时会复制到app/libs目录下-->
+<lib-file src="libs/xxx.jar" />
+<!-- 等同以下配置-->
+<source-file src="libs/xxx.jar" target-dir="app/libs">
+```
+
+- 4、仔细检查 source-file 无重复资源导入 错误配置如下：
 ```xml
 <!-- 图片 -->
 <source-file src="src/android/LibraryProject/res/drawable/title_help.png" target-dir="app/src/main/res/drawable-hdpi"/>
@@ -47,15 +55,6 @@
 ```xml
 <source-file src="src/android/toone/CameraLauncher.java" target-dir="src/android/com/toone/v3/plugins/camera" />
 ```
-## 总结：在配置source-file文件的target-dir路径时是以工程android为相对根目录的。在配置lib-file时是以app/libs为相对根目录如：
-```xml
-<!-- 最终插件安装时会复制到app/libs目录下-->
-<lib-file src="libs/xxx.jar" />
-等同以下配置
-<source-file src="libs/xxx.jar" target-dir="app/libs">
-```
-
-
 对比原生相机插件，最大程度与原工程java资源覆盖冲突：
 ```xml
 <source-file src="src/android/CameraLauncher.java" target-dir="src/org/apache/cordova/camera" />
