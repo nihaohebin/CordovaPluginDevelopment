@@ -31,13 +31,19 @@
  <!-- 音频文件 -->
  <source-file src="src/android/LibraryProject/res/raw/beep.ogg" target-dir="app/src/main/res/raw"/>
 ```
-- 3、仔细检查 source-file 无重复资源导入 如：
+- 3、libsSO库资源，target-dir为app/libs/ + 架构包目录，如：
+```xml
+ <source-file src="libs/arm64-v8a/libscrypt_crypho.so" target-dir="app/libs/arm64-v8a/"/>
+ <source-file src="libs/armeabi/libscrypt_crypho.so" target-dir="app/libs/armeabi/"/>
+ <source-file src="libs/armeabi-v7a/libscrypt_crypho.so" target-dir="app/libs/armeabi-v7a/"/>
+```
+- 4、仔细检查 source-file 无重复资源导入 如：
 ```xml
 <!-- 图片 -->
 <source-file src="src/android/LibraryProject/res/drawable/title_help.png" target-dir="app/src/main/res/drawable-hdpi"/>
 <source-file src="src/android/LibraryProject/res/drawable/title_help.png" target-dir="app/src/main/res/drawable-hdpi"/>
 ```
-- 4、配置java层级目录时一定要以企业名称 + 项目名称 + 类型目录 ，如下target-dir配置：
+- 5、配置java层级目录时一定要以企业名称 + 项目名称 + 类型目录 ，如下target-dir配置：
 ```xml
 <source-file src="src/android/toone/CameraLauncher.java" target-dir="src/android/com/toone/v3/plugins/camera" />
 ```
@@ -45,7 +51,7 @@
 ```xml
 <source-file src="src/android/CameraLauncher.java" target-dir="src/org/apache/cordova/camera" />
 ```
-- 5、插件包名（插件包文件夹名称）要与插件pluginId一致，并且插件ID命名规则为企业名称 + 项目名称 + 插件名，如
+- 6、插件包名（插件包文件夹名称）要与插件pluginId一致，并且插件ID命名规则为企业名称 + 项目名称 + 插件名，如
 
 ```xml
      <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
