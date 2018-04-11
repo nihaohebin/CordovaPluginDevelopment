@@ -47,6 +47,15 @@
 ```xml
 <source-file src="src/android/toone/CameraLauncher.java" target-dir="src/android/com/toone/v3/plugins/camera" />
 ```
+## 总结：在配置source-file文件的target-dir路径时是以工程android为相对根目录的。在配置lib-file时是以app/libs为相对根目录如：
+```xml
+<!-- 最终插件安装时会复制到app/libs目录下-->
+<lib-file src="libs/xxx.jar" />
+等同以下配置
+<source-file src="libs/xxx.jar" target-dir="app/libs">
+```
+
+
 对比原生相机插件，最大程度与原工程java资源覆盖冲突：
 ```xml
 <source-file src="src/android/CameraLauncher.java" target-dir="src/org/apache/cordova/camera" />
@@ -56,5 +65,5 @@
 ```xml
      <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
              id="cordova-plugin-toone-traffic-camera"
-	         version="2.0.2">
+	     version="2.0.2">
 ```
