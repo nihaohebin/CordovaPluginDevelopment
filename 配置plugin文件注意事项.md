@@ -66,3 +66,31 @@
              id="cordova-plugin-toone-traffic-camera"
 	     version="2.0.2">
 ```
+- 7、在添加插件时，由于需要动态加入第三方APPKEY参数，如下可这么做：
+命令：cordova plugin add to/plugin/path --variable APP_KEY=hello --variable APP_SECRET=123456
+
+```xml
+<!-- 首先定义传参名,default为默认参数值-->
+<preference name="APP_KEY" default="123" />
+<preference name="APP_SECRET" default="ABC" />
+
+<!-- 在android平台定义变量 -->
+<platform name="android">
+
+    <config-file parent="/*" target="res/xml/config.xml">
+        <feature name="BadgerPlugin">
+            <param name="android-package" value="toone.v3.plugins.badger.BadgerPlugin" />
+        </feature>
+    </config-file>
+
+     <config-file target="AndroidManifest.xml" parent="/manifest/application">
+          <meta-data android:name="APP_KEY" android:value="$APP_KEY" />
+          <meta-data android:name="APP_SECRET" android:value="$APP_SECRET" />
+    </config-file>
+    <source-file src="src/android/BadgerPlugin.java" target-dir="src/toone/v3/plugins/badger" />
+</platform>
+
+```
+执行完命令时，"hello"值便会赋值变量"$APP_KEY","123456"值便会赋值变量"$APP_SECRET";
+
+
