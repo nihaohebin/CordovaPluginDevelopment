@@ -66,7 +66,8 @@
              id="cordova-plugin-toone-traffic-camera"
 	     version="2.0.2">
 ```
-- 7、在添加插件时，由于需要动态加入第三方APPKEY参数，如下可这么做：
+- 7、在添加插件时，由于需要动态加入第三方APPKEY参数，如下可这么做：  
+
 命令：cordova plugin add to/plugin/path --variable APP_KEY=hello --variable APP_SECRET=123456
 
 ```xml
