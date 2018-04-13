@@ -1,8 +1,8 @@
-## 插件plugin.xml文件配置规范
+## 插件plugin.xml文件配置规范(照着这个葫芦画自己的瓢)
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 配置pluginId和pluginVersion-->
-<!-- 插件包名（插件包文件夹名称）要与插件pluginId一致，插件id命名**规范**：企业名称 + 项目名称 + 插件名 -->
+<!-- 插件包名（插件包文件夹名称）要与插件pluginId一致，插件id命名规范：企业名称 + 项目名称 + 插件名 -->
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
         id="cordova-plugin-toone-test-version"   
@@ -25,7 +25,7 @@
         <engine name="cordova" version=">=6.0.0" />
     </engines>
   
-    <!--插件js接口资源和全局调用关键字 clobbers命名**规范**：企业名称 + 项目 + 调用名 -->
+    <!--插件js接口资源和全局调用关键字 clobbers命名规范：企业名称 + 项目 + 调用名 -->
     <js-module src="www/AppVersionPlugin.js">
        <clobbers target="toone.test.getAppVersion" />
     </js-module>
@@ -53,14 +53,14 @@
           <meta-data android:name="APP_SECRET" android:value="$APP_SECRET" />
        </config-file>
         
-      <!--配置java层级目录命名**规范**：企业名称 + 项目名称 + 类型目录 -->
+      <!--配置java层级目录命名规范：企业名称 + 项目名称 + 类型目录 -->
       <source-file src="src/android/toone/CameraLauncher.java" target-dir="src/android/com/toone/v3/plugins/camera" />
         
       <!-- libsSO库资源，target-dir为app/libs/ + 架构包目录 -->
       <source-file src="libs/armeabi/libscrypt_crypho.so" target-dir="app/libs/armeabi/"/>
       <source-file src="libs/armeabi-v7a/libscrypt_crypho.so" target-dir="app/libs/armeabi-v7a/"/>
       
-      <!-- 资源文件命名**规范**：企业名称 + 项目名称 + 资源类型 +  资源名称，最大程度避免与主工程资源覆盖或冲突 -->
+      <!-- 资源文件命名规范：企业名称 + 项目名称 + 资源类型 +  资源名称，最大程度避免与主工程资源覆盖或冲突 -->
       <!-- res资源，target-dir为app/src/main/res/ + 资源目录-->
       <source-file src="src/android/LibraryProject/res/drawable/toone_traffic_xml_name.xml" target-dir="app/src/main/res/drawable"/>
       <source-file src="src/android/LibraryProject/res/drawable/toone_traffic_png_head.png" target-dir="app/src/main/res/drawable-hdpi"/>
