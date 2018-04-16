@@ -1,4 +1,4 @@
-## 插件plugin.xml文件配置规范(照着这个葫芦画自己的瓢)
+## 插件plugin.xml文件配置规范(照着葫芦画个的瓢)
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 配置pluginId和pluginVersion-->
