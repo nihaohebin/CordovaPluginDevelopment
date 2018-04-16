@@ -8,7 +8,7 @@
 ## 三、快速开发
 [Android快速开发自定义cordova插件文档](https://github.com/nihaohebin/CordovaPluginDevelopment/blob/master/%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E4%B8%8E%E5%AE%89%E8%A3%85.md)
 ## 四、已配置好的插件开发Android工程环境
-[插件开发Android工程环境下载](https://github.com/nihaohebin/CordovaPluginDevelopment.git)
+[开发Android插件工程下载](https://github.com/nihaohebin/CordovaPluginDevelopment.git)
 ## 五、注意事项
 - 1、plugin.xml配置规范模板：[插件plugin配置规范模板](https://github.com/nihaohebin/CordovaPluginDevelopment/blob/master/%E6%8F%92%E4%BB%B6plugin%E9%85%8D%E7%BD%AE%E8%A7%84%E8%8C%83%E6%A8%A1%E6%9D%BF.md)
 - 2、plugin.xml配置dependency时，请检查源工程已有的插件清单，避免冲突：[已有插件清单查询](https://github.com/nihaohebin/CordovaPluginDevelopment/blob/master/%E6%BA%90%E5%B7%A5%E7%A8%8B%E6%8F%92%E4%BB%B6%E6%B8%85%E5%8D%95.md)
