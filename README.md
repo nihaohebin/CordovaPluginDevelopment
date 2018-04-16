@@ -6,7 +6,7 @@
 - 2、Java 7 或以上版本：[jdk下载地址](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 - 3、node.js官网：[node.js下载地址](https://nodejs.org/)
 ## 三、快速开发
-[快速自定义cordova插件开发文档](https://github.com/nihaohebin/CordovaPluginDevelopment/blob/master/%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E4%B8%8E%E5%AE%89%E8%A3%85.md)
+[Android快速开发自定义cordova插件文档](https://github.com/nihaohebin/CordovaPluginDevelopment/blob/master/%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E4%B8%8E%E5%AE%89%E8%A3%85.md)
 ## 四、已配置好的插件开发Android工程环境
 [插件开发Android工程环境下载](https://github.com/nihaohebin/CordovaPluginDevelopment.git)
 ## 五、注意事项
