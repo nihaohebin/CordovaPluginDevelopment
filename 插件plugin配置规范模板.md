@@ -1,6 +1,7 @@
-## 插件plugin.xml文件配置规范(照着葫芦画个的瓢)
+## 插件plugin.xml文件配置规范(照着葫芦画个瓢)
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>  
+
 <!-- 配置pluginId和pluginVersion-->
 <!-- 插件包名（插件包文件夹名称）要与插件pluginId一致，插件id命名规范：企业名称 + 项目名称 + 插件名 -->
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
@@ -57,8 +58,8 @@
       <source-file src="src/android/toone/CameraLauncher.java" target-dir="src/android/com/toone/v3/plugins/camera" />
         
       <!-- libsSO库资源，target-dir为app/libs/ + 架构包目录 -->
-      <source-file src="libs/armeabi/libscrypt_crypho.so" target-dir="app/libs/armeabi/"/>
-      <source-file src="libs/armeabi-v7a/libscrypt_crypho.so" target-dir="app/libs/armeabi-v7a/"/>
+      <source-file src="libs/armeabi/toone_traffic_so_crypho.so" target-dir="app/libs/armeabi/"/>
+      <source-file src="libs/armeabi-v7a/toone_traffic_so_crypho.so" target-dir="app/libs/armeabi-v7a/"/>
       
       <!-- 资源文件命名规范：企业名称 + 项目名称 + 资源类型 +  资源名称，最大程度避免与主工程资源覆盖或冲突 -->
       <!-- res资源，target-dir为app/src/main/res/ + 资源目录-->
@@ -72,11 +73,11 @@
       <source-file src="src/android/LibraryProject/res/values/toone_traffic_colors.xml" target-dir="app/src/main/res/values"/>
       <source-file src="src/android/LibraryProject/res/values/toone_traffic_ids.xml" target-dir="app/src/main/res/values"/>
       <source-file src="src/android/LibraryProject/res/values/toone_traffic_style.xml" target-dir="app/src/main/res/values"/>
+      <source-file src="src/android/LibraryProject/res/values/toone_traffic_strings.xml" target-dir="app/src/main/res/values"/>
       <!--注意：仔细检查 source-file 无重复资源导入-->
         
-      <!-- 配置jar包资源 -->
+      <!-- 配置jar包资源两种方式 -->
       <lib-file src="libs/xxx.jar" />
-      <!-- 等同以下配置-->
       <source-file src="libs/xxx.jar" target-dir="app/libs"/> 
       
       <!--插件 framework配置-->
