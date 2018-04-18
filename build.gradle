@@ -1,6 +1,7 @@
 buildscript {
     repositories {
         jcenter()
+        mavenCentral()
         google()
     }
     dependencies {
@@ -14,14 +15,15 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+        mavenCentral()
         google()
     }
     //This replaces project.properties w.r.t. build settings
     project.ext {
         defaultBuildToolsVersion="27.0.0" //String
         defaultMinSdkVersion=19 //Integer - Minimum requirement is Android 4.4
-        defaultTargetSdkVersion=23 //Integer - We ALWAYS target the latest by default
-        defaultCompileSdkVersion=23 //Integer - We ALWAYS compile with the latest by default
+        defaultTargetSdkVersion=27 //Integer - We ALWAYS target the latest by default
+        defaultCompileSdkVersion=27 //Integer - We ALWAYS compile with the latest by default
     }
 }
 
