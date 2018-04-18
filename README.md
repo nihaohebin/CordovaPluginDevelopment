@@ -2,7 +2,7 @@
 ## 一、Cordova插件开发流程简介
 ![](https://i.imgur.com/fHfjWWK.png)
 ## 二、版本要求及开发工具下载
-- 1、Android SDK 要求 Android 3.0 及以上版本：[国内android studio下载地址](http://www.android-studio.org/)
+- 1、AndroidStudio 3.0 及以上版本：[下载与安装教程](https://juejin.im/post/59c879a3f265da064703fbff)
 - 2、Java 7 或以上版本：[jdk下载地址](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 - 3、node.js官网：[node.js下载地址](https://nodejs.org/)
 ## 三、快速开发
