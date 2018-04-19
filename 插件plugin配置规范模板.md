@@ -58,8 +58,8 @@
       <source-file src="src/android/toone/CameraLauncher.java" target-dir="src/android/com/toone/v3/plugins/camera" />
         
       <!-- libsSO库资源，target-dir为app/libs/ + 架构包目录 -->
-      <source-file src="libs/armeabi/toone_traffic_so_crypho.so" target-dir="app/libs/armeabi/"/>
-      <source-file src="libs/armeabi-v7a/toone_traffic_so_crypho.so" target-dir="app/libs/armeabi-v7a/"/>
+      <source-file src="libs/armeabi/toone_traffic_so_crypho.so" target-dir="app/src/main/jniLibs/armeabi/"/>
+      <source-file src="libs/armeabi-v7a/toone_traffic_so_crypho.so" target-dir="app/src/main/jniLibs/armeabi-v7a/"/>
       
       <!-- 资源文件命名规范：企业名称 + 项目名称 + 资源类型 +  资源名称，最大程度避免与主工程资源覆盖或冲突 -->
       <!-- res资源，target-dir为app/src/main/res/ + 资源目录-->
@@ -75,6 +75,10 @@
       <source-file src="src/android/LibraryProject/res/values/toone_traffic_style.xml" target-dir="app/src/main/res/values"/>
       <source-file src="src/android/LibraryProject/res/values/toone_traffic_strings.xml" target-dir="app/src/main/res/values"/>
       <!--注意：仔细检查 source-file 无重复资源导入-->
+      
+      <!--第二种导入方式-->
+      <resource-file src="src/android/res/drawable-hdpi/toone_traffic_actionbar_divider.png" target="res/drawable-hdpi/toone_traffic_actionbar_divider.png" />
+      <resource-file src="src/android/res/layout/toone_traffic_popwin_layout.xml"  target="res/layout/toone_traffic_layout.xml" />
         
       <!-- 配置jar包资源两种方式 -->
       <lib-file src="libs/xxx.jar" />
