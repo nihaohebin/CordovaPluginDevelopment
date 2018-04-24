@@ -1,7 +1,6 @@
 # Cordova插件开发
 ## 一、Cordova插件开发流程简介
 ![](https://i.imgur.com/fHfjWWK.png)
-![](./img/developmentProcess.png)
 ## 二、版本要求及开发工具下载
 - 1、AndroidStudio 3.0 及以上版本：[下载与安装教程](https://juejin.im/post/59c879a3f265da064703fbff)
 - 2、Java 7 及以上版本：[jdk下载与安装配置教程](https://blog.csdn.net/u012934325/article/details/73441617)
