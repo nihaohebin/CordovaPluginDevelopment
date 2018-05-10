@@ -96,7 +96,7 @@
       <resource-file src="src/android/res/layout/toone_traffic_popwin_layout.xml"  target="res/layout/toone_traffic_layout.xml" />
         
       <!-- 配置jar包资源两种方式 -->
-      <lib-file src="libs/xxx.jar" />
+      <lib-file src="src/android/libs/xxx.jar" />
       <source-file src="libs/xxx.jar" target-dir="app/libs"/> 
       
       <!--插件 framework配置-->
