@@ -53,20 +53,64 @@
             <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
             <uses-permission android:name="android.permission.INTERNET" />
             <uses-permission android:name="android.permission.WAKE_LOCK" />
-            <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-            <uses-permission android:name="android.permission.WRITE_SETTINGS" />
-            <uses-permission android:name="android.permission.VIBRATE" />
-            <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
-            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-        </config-file>
-        
-        <!--配置插入 AndroidManifest.xml文件 -->
-       <config-file target="AndroidManifest.xml" parent="/manifest/application">
-          <meta-data android:name="APP_KEY" android:value="$APP_KEY" />
-          <meta-data android:name="APP_SECRET" android:value="$APP_SECRET" />
+       </config-file>
+       
+       <!-- 配置activity service receiver provider meta-data 等-->
+       <config-file target="AndroidManifest.xml" parent="/manifest/application" mode="merge">
+          
+           <activity android:name="cn.jpush.android.ui.PushActivity"
+               android:theme="@android:style/Theme.Translucent.NoTitleBar"
+               android:configChanges="orientation|keyboardHidden">
+               <intent-filter>
+                   <action android:name="cn.jpush.android.ui.PushActivity" />
+                   <category android:name="android.intent.category.DEFAULT" />
+                   <category android:name="$PACKAGE_NAME" />
+               </intent-filter>
+           </activity>
+
+           <!-- Required SDK 核心功能-->
+           <service android:name="cn.jpush.android.service.PushService"
+             android:enabled="true"
+             android:exported="false"
+             android:process=":remote">
+               <intent-filter>
+                   <action android:name="cn.jpush.android.intent.REGISTER" />
+                   <action android:name="cn.jpush.android.intent.REPORT" />
+                   <action android:name="cn.jpush.android.intent.PushService" />
+                   <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+               </intent-filter>
+           </service>
+
+           <!-- Required SDK核心功能-->
+           <receiver android:name="cn.jpush.android.service.PushReceiver"
+             android:enabled="true"
+             android:exported="false">
+               <intent-filter android:priority="1000">
+                   <!--Required  显示通知栏 -->
+                   <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
+                   <category android:name="$PACKAGE_NAME" />
+               </intent-filter>
+               <intent-filter>
+                   <action android:name="android.intent.action.USER_PRESENT" />
+                   <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+               </intent-filter>
+               <!-- Optional -->
+               <intent-filter>
+                   <action android:name="android.intent.action.PACKAGE_ADDED" />
+                   <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                   <data android:scheme="package" />
+               </intent-filter>
+           </receiver>
+
+           <!-- since 3.0.9 Required SDK 核心功能-->
+           <provider
+               android:authorities="$PACKAGE_NAME.DataProvider"
+               android:name="cn.jpush.android.service.DataProvider"
+               android:exported="true" />
+
+           <!-- Required. Enable it you can get statistics data with channel -->
+           <meta-data android:name="APP_KEY" android:value="$APP_KEY" />
+           <meta-data android:name="APP_SECRET" android:value="$APP_SECRET" />
        </config-file>
         
       <!--配置java层级目录命名规范：企业名称 + 项目名称 + 类型目录 -->
