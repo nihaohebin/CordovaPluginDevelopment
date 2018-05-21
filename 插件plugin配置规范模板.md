@@ -41,7 +41,7 @@
     <!-- android 平台配置-->
     <platform name="android">
     
-        <!-- 配置继承CordovaPlugin java端接口资源-->
+        <!-- 配置config.xml文件  该文件继承CordovaPlugin的java端接口资源-->
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="AppVersion">
                 <param name="android-package" value="uk.co.whiteoctober.cordova.AppVersion"/>
@@ -58,6 +58,7 @@
        <!-- 配置activity service receiver provider meta-data 等-->
        <config-file target="AndroidManifest.xml" parent="/manifest/application" mode="merge">
           
+          <!-- activity -->
            <activity android:name="cn.jpush.android.ui.PushActivity"
                android:theme="@android:style/Theme.Translucent.NoTitleBar"
                android:configChanges="orientation|keyboardHidden">
@@ -68,20 +69,18 @@
                </intent-filter>
            </activity>
 
-           <!-- Required SDK 核心功能-->
+            <!-- service -->
            <service android:name="cn.jpush.android.service.PushService"
              android:enabled="true"
              android:exported="false"
              android:process=":remote">
                <intent-filter>
                    <action android:name="cn.jpush.android.intent.REGISTER" />
-                   <action android:name="cn.jpush.android.intent.REPORT" />
-                   <action android:name="cn.jpush.android.intent.PushService" />
                    <action android:name="cn.jpush.android.intent.PUSH_TIME" />
                </intent-filter>
            </service>
 
-           <!-- Required SDK核心功能-->
+           <!-- receiver-->
            <receiver android:name="cn.jpush.android.service.PushReceiver"
              android:enabled="true"
              android:exported="false">
@@ -90,42 +89,35 @@
                    <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
                    <category android:name="$PACKAGE_NAME" />
                </intent-filter>
-               <intent-filter>
-                   <action android:name="android.intent.action.USER_PRESENT" />
-                   <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
-               </intent-filter>
-               <!-- Optional -->
-               <intent-filter>
-                   <action android:name="android.intent.action.PACKAGE_ADDED" />
-                   <action android:name="android.intent.action.PACKAGE_REMOVED" />
-                   <data android:scheme="package" />
-               </intent-filter>
            </receiver>
 
-           <!-- since 3.0.9 Required SDK 核心功能-->
+           <!-- provider -->
            <provider
                android:authorities="$PACKAGE_NAME.DataProvider"
                android:name="cn.jpush.android.service.DataProvider"
                android:exported="true" />
 
-           <!-- Required. Enable it you can get statistics data with channel -->
+           <!-- meta-data -->
            <meta-data android:name="APP_KEY" android:value="$APP_KEY" />
            <meta-data android:name="APP_SECRET" android:value="$APP_SECRET" />
        </config-file>
+       
+       <!-- 添加assets资源 -->
+      <source-file src="sdk/android/lib/pingpp/libs/data.bin" target-dir="app/src/main/assets"/>
         
       <!--配置java层级目录命名规范：企业名称 + 项目名称 + 类型目录 -->
-      <source-file src="src/android/toone/CameraLauncher.java" target-dir="src/android/com/toone/v3/plugins/camera" />
+      <source-file src="src/android/toone/CameraLauncher.java" target-dir="src/cn/com/toone/v3/plugins/camera" />
         
       <!-- libsSO库资源，target-dir为app/libs/ + 架构包目录 -->
       <source-file src="libs/armeabi/toone_traffic_so_crypho.so" target-dir="app/src/main/jniLibs/armeabi/"/>
       <source-file src="libs/armeabi-v7a/toone_traffic_so_crypho.so" target-dir="app/src/main/jniLibs/armeabi-v7a/"/>
       
-      <!-- 资源文件命名规范：企业名称 + 项目名称 + 资源类型 +  资源名称，最大程度避免与主工程资源覆盖或冲突 -->
+      <!-- 资源文件命名规范：企业名称 + 项目名称 + 资源名称，最大程度避免与主工程资源覆盖或冲突 -->
       <!-- res资源，target-dir为app/src/main/res/ + 资源目录-->
-      <source-file src="src/android/LibraryProject/res/drawable/toone_traffic_xml_name.xml" target-dir="app/src/main/res/drawable"/>
-      <source-file src="src/android/LibraryProject/res/drawable/toone_traffic_png_head.png" target-dir="app/src/main/res/drawable-hdpi"/>
+      <source-file src="src/android/LibraryProject/res/drawable/toone_traffic_name.xml" target-dir="app/src/main/res/drawable"/>
+      <source-file src="src/android/LibraryProject/res/drawable/toone_traffic_head.png" target-dir="app/src/main/res/drawable-hdpi"/>
       <!---布局文件-->
-      <source-file src="src/android/LibraryProject/res/layout/activity_toone_traffic_layout_name.xml" target-dir="app/src/main/res/layout"/>
+      <source-file src="src/android/LibraryProject/res/layout/activity_toone_traffic_name.xml" target-dir="app/src/main/res/layout"/>
       <!-- -音频文件 -->
       <source-file src="src/android/LibraryProject/res/raw/toone_traffic_beep.ogg" target-dir="app/src/main/res/raw"/>
       <!---value文件-->
