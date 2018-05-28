@@ -34,7 +34,7 @@
     <!-- 在添加插件时，由于需要动态加入第三方APPKEY参数 -->
     <!-- 命令：cordova plugin add to/plugin/path --variable APP_KEY=hello --variable APP_SECRET=123456-->
     <!-- 执行完命令时，在android的config-file标签中的value值中，"hello"值便会赋值变量"$APP_KEY","123456"值便会赋值变量"$APP_SECRET"-->
-    <!-- 首先定义传参名,default为默认参数值-->
+    <!-- 首先定义传参名,default为默认参数值  必须配置默认值并不能填充 空值和中文-->
     <preference name="APP_KEY" default="123" />
     <preference name="APP_SECRET" default="ABC" />
     
