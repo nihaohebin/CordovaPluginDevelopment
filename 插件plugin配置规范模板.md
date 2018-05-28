@@ -50,7 +50,6 @@
         
         <!-- 配置权限 -->
        <config-file target="AndroidManifest.xml" parent="/manifest" mode="merge">
-            <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
             <uses-permission android:name="android.permission.INTERNET" />
             <uses-permission android:name="android.permission.WAKE_LOCK" />
        </config-file>

@@ -1,22 +1,23 @@
 #### 源工程已有jar包
 ```
-compile 'com.android.support:support-v4:23.1.1'
-compile 'io.reactivex:rxjava:1.1.6'
-compile 'io.reactivex:rxandroid:1.2.1'
-compile 'com.android.support:multidex:1.0.2'
-//角标
-compile 'me.leolin:ShortcutBadger:1.1.19@aar'
-//json解析
-compile 'com.google.code.gson:gson:2.8.2'
-//网络请求
-compile 'com.squareup.okhttp3:okhttp:3.9.0'
+//noinspection GradleDependency,GradleCompatible
+implementation 'com.android.support:support-v4:23.1.1'
+//图片压缩luban
+implementation 'io.reactivex:rxjava:1.1.6'
+implementation 'io.reactivex:rxandroid:1.2.1'
+//noinspection GradleDependency,GradleCompatible
+implementation 'com.android.support:multidex:1.0.2'
+implementation 'com.google.code.gson:gson:2.8.2'
+implementation 'com.squareup.okhttp3:okhttp:3.9.0'
+implementation 'com.google.zxing:core:3.0.1'
 //听云
-compile 'com.networkbench.newlens.agent.android:nbs.newlens.agent:2.8.0'
+//noinspection GradleDependency
+implementation 'com.networkbench.newlens.agent.android:nbs.newlens.agent:2.8.3'
+//图像处理
+implementation 'com.github.bumptech.glide:glide:3.8.0'
+
 //xml文件解析
 compile files('libs/dom4j-1.6.1.jar')
-//极光推送
-compile files('libs/jcore-android-1.1.8.jar')
-compile files('libs/jpush-android-3.1.0.jar')
 //微信分享支付一体化
 compile files('libs/libammsdk.jar')
 //腾讯
@@ -32,13 +33,9 @@ compile files('libs/umeng_social_net.jar')
 compile files('libs/umeng_social_shareboard.jar')
 compile files('libs/umeng_social_shareview.jar')
 compile files('libs/umeng_social_tool.jar')
-//图像处理
-compile 'com.github.bumptech.glide:glide:3.8.0'
 compile files('libs/universal-image-loader-1.9.5.jar')
 //二维码
 compile files('libs/zxing.jar')
-//讯飞语音
-compile files('libs/Msc.jar')
 //IOutil
 compile files('libs/commons-io-2.6.jar')
 //TalkingData
