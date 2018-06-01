@@ -31,4 +31,3 @@ compile files('libs/universal-image-loader-1.9.5.jar')
 //TalkingData
 compile files('libs/SaaS_AppAnalytics_Android_SDK_V4.0.12.jar')
 ```
-供测试已有Jar包：[供测试已有Jar包下载](https://github.com/nihaohebin/CordovaPluginDevelopment/tree/master/app/libs)
