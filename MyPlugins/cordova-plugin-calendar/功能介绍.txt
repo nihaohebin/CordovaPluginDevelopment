@@ -1,3 +1,0 @@
-
-1、手机系统行程设置
-https://github.com/EddyVerbruggen/Calendar-PhoneGap-Plugin
