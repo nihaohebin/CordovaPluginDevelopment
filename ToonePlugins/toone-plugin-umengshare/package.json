@@ -1,0 +1,19 @@
+{
+  "name": "toone-plugin-UmengSharePlugin",
+  "version": "1.0.0",
+  "description": "Cordova UmengSharePlugin Plugin",
+  "cordova": {
+    "id": "toone-plugin-UmengSharePlugin",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "UmengSharePlugin",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "",
+  "license": "Apache 2.0"
+}

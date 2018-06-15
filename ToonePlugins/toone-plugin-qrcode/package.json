@@ -1,0 +1,19 @@
+{
+  "name": "toone-plugin-qrcode",
+  "version": "1.0.0",
+  "description": "Cordova qrcode Plugin",
+  "cordova": {
+    "id": "toone-plugin-qrcode",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "qrcode",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "",
+  "license": "Apache 2.0"
+}

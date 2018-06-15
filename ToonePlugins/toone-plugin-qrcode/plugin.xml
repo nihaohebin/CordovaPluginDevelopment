@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+		id="toone-plugin-qrcode"
+		version="1.0.0">
+		
+    <name>qrcode</name>
+    <description>Cordova qrcode Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,qrcode</keywords>
+  
+    <js-module src="www/QRCodeScan.js" name="QRCodeScan">
+        <clobbers target="cordova.plugins.barcodeScanner" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+	
+        <config-file target="res/xml/config.xml" parent="/*">
+		  <feature name="QRcodeScanner">
+				<param name="android-package" value="toone.v3.plugins.qrcode.QRCodePlugin" />
+		  </feature>  
+        </config-file>
+		
+		<config-file target="AndroidManifest.xml" parent="/*">
+			<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+			<uses-permission android:name="android.permission.CAMERA"/>
+        </config-file>
+		
+		<config-file target="AndroidManifest.xml" parent="application">
+			 <activity
+				android:name="toone.v3.plugins.qrcode.MipcaActivityCapture"
+				android:configChanges="orientation|keyboardHidden"
+				android:screenOrientation="portrait"
+				android:theme="@android:style/Theme.NoTitleBar"
+				android:windowSoftInputMode="stateAlwaysHidden"/>
+		</config-file>	
+		 
+        <source-file src="src/android/MipcaActivityCapture.java" target-dir="src/toone/v3/plugins/qrcode" />
+		<source-file src="src/android/QRCodePlugin.java" target-dir="src/toone/v3/plugins/qrcode" />
+		
+		<source-file src="src/android/zxing/camera/AutoFocusCallback.java" target-dir="src/toone/v3/plugins/qrcode/zxing/camera" />
+		<source-file src="src/android/zxing/camera/CameraConfigurationManager.java" target-dir="src/toone/v3/plugins/qrcode/zxing/camera" />
+		<source-file src="src/android/zxing/camera/CameraManager.java" target-dir="src/toone/v3/plugins/qrcode/zxing/camera" />
+		<source-file src="src/android/zxing/camera/FlashlightManager.java" target-dir="src/toone/v3/plugins/qrcode/zxing/camera" />
+		<source-file src="src/android/zxing/camera/PlanarYUVLuminanceSource.java" target-dir="src/toone/v3/plugins/qrcode/zxing/camera" />
+		<source-file src="src/android/zxing/camera/PreviewCallback.java" target-dir="src/toone/v3/plugins/qrcode/zxing/camera" />
+		
+		<source-file src="src/android/zxing/decoding/CaptureActivityHandler.java" target-dir="src/toone/v3/plugins/qrcode/zxing/decoding" />
+		<source-file src="src/android/zxing/decoding/DecodeFormatManager.java" target-dir="src/toone/v3/plugins/qrcode/zxing/decoding" />
+		<source-file src="src/android/zxing/decoding/DecodeHandler.java" target-dir="src/toone/v3/plugins/qrcode/zxing/decoding" />
+		<source-file src="src/android/zxing/decoding/DecodeThread.java" target-dir="src/toone/v3/plugins/qrcode/zxing/decoding" />
+		<source-file src="src/android/zxing/decoding/FinishListener.java" target-dir="src/toone/v3/plugins/qrcode/zxing/decoding" />
+		<source-file src="src/android/zxing/decoding/InactivityTimer.java" target-dir="src/toone/v3/plugins/qrcode/zxing/decoding" />
+		<source-file src="src/android/zxing/decoding/Intents.java" target-dir="src/toone/v3/plugins/qrcode/zxing/decoding" />
+		
+		<source-file src="src/android/zxing/view/ViewfinderResultPointCallback.java" target-dir="src/toone/v3/plugins/qrcode/zxing/view" />
+		<source-file src="src/android/zxing/view/ViewfinderView.java" target-dir="src/toone/v3/plugins/qrcode/zxing/view" />
+
+		<source-file src="src/android/res/drawable/qr_close.png" target-dir="app/src/main/res/drawable"/>
+		<source-file src="src/android/res/drawable/qr_light.png" target-dir="app/src/main/res/drawable"/>
+
+     	<source-file src="src/android/res/layout/activity_qr_capture.xml" target-dir="app/src/main/res/layout"/>
+     	
+		<source-file src="src/android/res/raw/beep.ogg" target-dir="app/src/main/res/raw"/>
+		
+		<source-file src="src/android/res/values/qr_colors.xml" target-dir="app/src/main/res/values"/>	
+	
+	    <framework src="com.google.zxing:core:3.0.1" />
+    </platform>
+  
+</plugin>

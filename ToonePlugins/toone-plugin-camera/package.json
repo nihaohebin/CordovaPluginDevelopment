@@ -1,0 +1,23 @@
+{
+  "name": "cordova-plugin-camera",
+  "version": "4.0.4-dev",
+  "description": "Cordova Camera Plugin",
+  "cordova": {
+    "id": "cordova-plugin-camera",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova-android",
+      "version": ">=6.3.0"
+    }
+  ],
+  "author": "",
+  "license": "Apache 2.0"
+}

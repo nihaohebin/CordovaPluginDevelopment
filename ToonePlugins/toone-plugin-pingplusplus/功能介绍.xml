@@ -1,0 +1,8 @@
+
+1、pingpp支付
+
+https://coding.net/u/pingplusplus/p/pingpp-cordova/git?public=true
+
+2、额外自定义
+	1> supportChannel接口 ：查询后台支持支付渠道类型
+	2> pay接口 ：请求toone后台获取charge信息

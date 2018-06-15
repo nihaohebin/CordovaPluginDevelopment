@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+		id="toone-plugin-webview"
+		version="1.0.0">
+		
+    <name>webview</name>
+    <description>Cordova webview Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,webview</keywords>
+  
+    <js-module src="www/webview.js" name="webview">
+        <clobbers target="cordova.plugins.webview" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+	
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Webview">
+				<param name="android-package" value="toone.v3.plugins.webview.TooneWebViewPlugin" />
+			</feature>
+        </config-file>
+		
+		<config-file target="AndroidManifest.xml" parent="application">
+			<activity
+				android:name="toone.v3.plugins.webview.TooneWebViewActivity"
+				android:configChanges="orientation|screenSize"
+				android:label="@string/app_name"
+				android:screenOrientation="portrait"
+				android:theme="@style/appSplash"/>
+		</config-file>
+		 
+
+        <source-file src="src/android/TooneWebViewActivity.java" target-dir="src/toone/v3/plugins/webview" />
+		<source-file src="src/android/TooneWebViewPlugin.java" target-dir="src/toone/v3/plugins/webview" />
+				
+    </platform>
+  
+</plugin>

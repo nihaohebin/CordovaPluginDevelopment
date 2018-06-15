@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:rim="http://www.blackberry.com/ns/widgets"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest"
+    xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+    id="cordova-plugin-contacts"
+    version="3.0.2-dev">
+
+    <name>Contacts</name>
+    <description>Cordova Contacts Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,contacts</keywords>
+    <repo>https://git-wip-us.apache.org/repos/asf/cordova-plugin-contacts.git</repo>
+    <issue>https://issues.apache.org/jira/browse/CB/component/12320652</issue>
+
+    <engines>
+        <engine name="cordova-android" version=">=6.3.0" />
+    </engines>
+
+    <js-module src="www/contacts.js" name="contacts">
+        <clobbers target="navigator.contacts" />
+    </js-module>
+
+    <js-module src="www/Contact.js" name="Contact">
+        <clobbers target="Contact" />
+    </js-module>
+
+    <js-module src="www/convertUtils.js" name="convertUtils">
+    </js-module>
+
+    <js-module src="www/ContactAddress.js" name="ContactAddress">
+        <clobbers target="ContactAddress" />
+    </js-module>
+
+    <js-module src="www/ContactError.js" name="ContactError">
+        <clobbers target="ContactError" />
+    </js-module>
+
+    <js-module src="www/ContactField.js" name="ContactField">
+        <clobbers target="ContactField" />
+    </js-module>
+
+    <js-module src="www/ContactFindOptions.js" name="ContactFindOptions">
+        <clobbers target="ContactFindOptions" />
+    </js-module>
+
+    <js-module src="www/ContactName.js" name="ContactName">
+        <clobbers target="ContactName" />
+    </js-module>
+
+    <js-module src="www/ContactOrganization.js" name="ContactOrganization">
+        <clobbers target="ContactOrganization" />
+    </js-module>
+
+    <js-module src="www/ContactFieldType.js" name="ContactFieldType">
+        <merges target="" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Contacts">
+                <param name="android-package" value="org.apache.cordova.contacts.ContactManager"/>
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.READ_CONTACTS" />
+            <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+            <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+        </config-file>
+
+        <source-file src="src/android/ContactAccessor.java" target-dir="src/org/apache/cordova/contacts" />
+        <source-file src="src/android/ContactAccessorSdk5.java" target-dir="src/org/apache/cordova/contacts" />
+        <source-file src="src/android/ContactManager.java" target-dir="src/org/apache/cordova/contacts" />
+        <source-file src="src/android/ContactInfoDTO.java" target-dir="src/org/apache/cordova/contacts" />
+    </platform>
+   
+</plugin>

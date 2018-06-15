@@ -1,0 +1,19 @@
+{
+  "name": "toone-plugin-webview",
+  "version": "1.0.0",
+  "description": "Cordova webview Plugin",
+  "cordova": {
+    "id": "toone-plugin-webview",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "webview",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "",
+  "license": "Apache 2.0"
+}

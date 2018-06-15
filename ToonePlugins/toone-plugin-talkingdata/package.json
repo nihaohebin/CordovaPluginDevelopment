@@ -1,0 +1,19 @@
+{
+  "name": "cordova-plugin-talkingdata",
+  "version": "1.0.0",
+  "description": "Cordova talkingdata Plugin",
+  "cordova": {
+    "id": "cordova-plugin-talkingdata",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "talkingdata",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "",
+  "license": "Apache 2.0"
+}

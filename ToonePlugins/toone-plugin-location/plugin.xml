@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+		id="toone-plugin-Location"
+		version="1.0.0">
+		
+    <name>Location</name>
+    <description>Cordova Location Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,Location</keywords>
+  
+    <js-module src="www/location.js" name="location">
+        <clobbers target="navigator.location" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+	
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Location">
+				<param name="android-package" value="toone.v3.plugins.location.LocationPlugin" />
+			</feature>
+        </config-file>
+
+        <source-file src="src/android/LocationPlugin.java" target-dir="src/toone/v3/plugins/location" />
+		<source-file src="src/android/LocationUtil.java" target-dir="src/toone/v3/plugins/location" />
+	
+    </platform>
+  
+</plugin>

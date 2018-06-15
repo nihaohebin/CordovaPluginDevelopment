@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-x-toast"
+        version="2.2.1">
+
+  <name>Toast</name>
+
+  <description>
+    This plugin allows you to show a Toast.
+    A Toast is a little non intrusive buttonless popup which automatically disappears.
+  </description>
+
+  <author>Eddy Verbruggen</author>
+
+  <license>MIT</license>
+
+  <keywords>Toast, Notification, Message, Alert</keywords>
+
+  <repo>https://github.com/EddyVerbruggen/Toast-PhoneGap-Plugin.git</repo>
+
+  <issue>https://github.com/EddyVerbruggen/Toast-PhoneGap-Plugin/issues</issue>
+
+  <engines>
+    <engine name="cordova" version=">=3.0.0"/>
+  </engines>
+
+  <js-module src="www/Toast.js" name="Toast">
+    <clobbers target="window.plugins.toast" />
+  </js-module>
+
+  <!-- android -->
+  <platform name="android">
+
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="Toast">
+        <param name="android-package" value="nl.xservices.plugins.Toast" />
+      </feature>
+    </config-file>
+
+    <source-file src="src/android/nl/xservices/plugins/Toast.java" target-dir="src/nl/xservices/plugins"/>
+  </platform>
+  
+</plugin>

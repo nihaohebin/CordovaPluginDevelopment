@@ -1,0 +1,14 @@
+
+1、开启二维码扫描
+ 
+ function success(){
+	console.log("success");
+ }
+ 
+ function fail(){
+	console.log("fail");
+ }
+ 
+ var options = {};
+  
+cordova.plugins.barcodeScanner.scan(success,fail,options);

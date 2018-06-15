@@ -1,0 +1,4 @@
+
+1、允许应用查询操作系统的当前设置，判断用户使用的语言
+	
+https://github.com/apache/cordova-plugin-globalization

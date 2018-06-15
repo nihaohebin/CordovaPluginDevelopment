@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+		id="toone-plugin-imagepicker"
+		version="1.0.0">
+		
+    <name>imagepicker</name>
+    <description>Cordova imagepicker Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,imagepicker</keywords>
+  
+    <js-module src="www/imagepicker.js" name="imagepicker">
+        <clobbers target="plugins.imagePicker" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+	
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="ImagePicker">
+				<param name="android-package" value="toone.v3.plugins.imagepicker.ImagePicker" />
+			</feature>
+        </config-file>
+		
+		  <config-file target="AndroidManifest.xml" parent="/*">
+			<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+			<uses-permission android:name="android.permission.CAMERA"/>
+        </config-file>
+		
+		<config-file target="AndroidManifest.xml" parent="application">
+		   <activity
+		      android:name="toone.v3.plugins.imagepicker.MultiImageChooserActivity"
+			  android:label="图片选择器"
+			  android:theme="@android:style/Theme.Holo.Light"/>
+		</config-file>	
+		
+        <source-file src="src/android/ImageFetcher.java" target-dir="src/toone/v3/plugins/imagepicker" />
+		<source-file src="src/android/ImagePicker.java" target-dir="src/toone/v3/plugins/imagePicker" />
+		<source-file src="src/android/MultiImageChooserActivity.java" target-dir="src/toone/v3/plugins/imagePicker" />
+	
+		<source-file src="src/android/res/drawable-mdpi/ic_action_discard_dark.png" target-dir="app/src/main/res/drawable-mdpi"/>
+		<source-file src="src/android/res/drawable-mdpi/ic_action_discard_light.png" target-dir="app/src/main/res/drawable-mdpi"/>
+		<source-file src="src/android/res/drawable-mdpi/ic_action_done_dark.png" target-dir="app/src/main/res/drawable-mdpi"/>
+		<source-file src="src/android/res/drawable-mdpi/ic_action_done_light.png" target-dir="app/src/main/res/drawable-mdpi"/>
+		<source-file src="src/android/res/drawable-mdpi/ic_action_loading_icon.png" target-dir="app/src/main/res/drawable-mdpi"/>
+
+		<source-file src="src/android/res/drawable-xhdpi/ic_action_discard_dark.png" target-dir="app/src/main/res/drawable-xhdpi"/>
+		<source-file src="src/android/res/drawable-xhdpi/ic_action_discard_light.png" target-dir="app/src/main/res/drawable-xhdpi"/>
+		<source-file src="src/android/res/drawable-xhdpi/ic_action_done_dark.png" target-dir="app/src/main/res/drawable-xhdpi"/>
+		<source-file src="src/android/res/drawable-xhdpi/ic_action_done_light.png" target-dir="app/src/main/res/drawable-xhdpi"/>
+
+		<source-file src="src/android/res/layout/actionbar_custom_view_done_discard.xml" target-dir="app/src/main/res/layout"/>
+		<source-file src="src/android/res/layout/actionbar_discard_button.xml" target-dir="app/src/main/res/layout"/>
+		<source-file src="src/android/res/layout/actionbar_done_button.xml" target-dir="app/src/main/res/layout"/>
+		<source-file src="src/android/res/layout/multiselectorgrid.xml" target-dir="app/src/main/res/layout"/>
+
+    </platform>
+  
+</plugin>

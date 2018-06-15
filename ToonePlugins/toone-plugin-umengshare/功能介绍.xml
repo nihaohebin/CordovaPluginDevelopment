@@ -1,0 +1,15 @@
+
+1、开启二维码扫描
+ 
+ 
+ function success(){
+	console.log("success");
+ }
+ 
+ function fail(){
+	console.log("fail");
+ }
+ 
+ var options = {};
+  
+navigator.UmengShare.share(text, title, url, imgUrl, platforms, successHandler, errorHandler);

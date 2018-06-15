@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+		id="toone-plugin-UmengSharePlugin"
+		version="1.0.0">
+		
+	  <name>UmengSharePlugin</name>
+	  <description>Cordova UmengSharePlugin Plugin</description>
+	  <license>Apache 2.0</license>
+	  <keywords>cordova,UmengSharePlugin</keywords>
+	  
+	  <js-module src="www/socialshare.js" name="socialshare">
+		  <clobbers target="navigator.UmengShare" />
+	  </js-module>
+	
+	  <preference name="UMENG_APPKEY" default="" />
+	  <preference name="UMENG_WEIXIN_ID" default="wxc330 de9595bbaf5d" />
+	  <preference name="UMENG_WEIXIN_SECRET" default="n你好" />
+	  <preference name="UMENG_QQ_ID" default="1106449943" />
+	  <preference name="UMENG_QQ_KEY" default="TPutLByCw9rojWr3" />
+	  <preference name="UMENG_SINA_KEY" default="3661469344" />
+	  <preference name="UMENG_SINA_SECRET" default="b4c27f1525565aecca051be5f1e8b91f" />
+
+    <!-- android -->
+    <platform name="android">
+	
+        <config-file target="res/xml/config.xml" parent="/*">
+          <feature name="UMengSharePlugin">
+				<param name="android-package" value="toone.v3.plugins.socialshare.SocialSharePlugin" />
+		  </feature>
+        </config-file>
+		
+		 <config-file target="AndroidManifest.xml" parent="application">
+			  <activity
+				android:name="com.umeng.qq.tencent.AuthActivity"
+				android:launchMode="singleTask"
+				android:noHistory="true">
+				<intent-filter>
+					<action android:name="android.intent.action.VIEW"/>
+
+					<category android:name="android.intent.category.DEFAULT"/>
+					<category android:name="android.intent.category.BROWSABLE"/>
+
+					<data
+						android:scheme="tencent$UMENG_QQ_ID"
+						tools:ignore="AppLinkUrlError"/>
+				</intent-filter>
+			 </activity>
+
+			 <activity
+				android:name="toone.v3.plugins.socialshare.WXEntryActivity"
+				android:configChanges="keyboardHidden|orientation|screenSize"
+				android:exported="true"
+				android:screenOrientation="portrait"
+				android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+			<activity
+				android:name="com.umeng.qq.tencent.AssistActivity"
+				android:configChanges="orientation|keyboardHidden|screenSize"
+				android:screenOrientation="portrait"
+				android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+			
+			<activity
+				android:name="com.umeng.socialize.media.WBShareCallBackActivity"
+				android:configChanges="keyboardHidden|orientation"
+				android:exported="false"
+				android:screenOrientation="portrait"
+				android:theme="@android:style/Theme.Translucent.NoTitleBar">
+			</activity>
+
+			<activity
+				android:name="com.sina.weibo.sdk.share.WbShareTransActivity"
+				android:launchMode="singleTask"
+				android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+				<intent-filter>
+					<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY"/>
+					<category android:name="android.intent.category.DEFAULT"/>
+				</intent-filter>
+			</activity>
+
+			<meta-data
+				android:name="UMENG_APPKEY"
+				android:value="$UMENG_APPKEY"/>
+			<meta-data
+				android:name="UMENG_WEIXIN_ID"
+				android:value="$UMENG_WEIXIN_ID"/>
+			<meta-data
+				android:name="UMENG_WEIXIN_SECRET"
+				android:value="$UMENG_WEIXIN_SECRET"/>
+			<meta-data
+				android:name="UMENG_QQ_ID"
+				android:value="\ $UMENG_QQ_ID"/>
+			<meta-data
+				android:name="UMENG_QQ_KEY"
+				android:value="$UMENG_QQ_KEY"/>
+			<meta-data
+				android:name="UMENG_SINA_KEY"
+				android:value="\ $UMENG_SINA_KEY"/>
+			<meta-data
+				android:name="UMENG_SINA_SECRET"
+				android:value="$UMENG_SINA_SECRET"/>
+		 </config-file>
+		
+
+        <source-file src="src/android/SocialSharePlugin.java" target-dir="src/toone/v3/plugins/socialshare" />
+		<source-file src="src/android/WXEntryActivity.java" target-dir="src/toone/v3/plugins/socialshare" />
+		
+		
+		<source-file src="src/android/res/anim/umeng_socialize_fade_in.xml" target-dir="app/src/main/res/anim"/>
+		<source-file src="src/android/res/anim/umeng_socialize_fade_out.xml" target-dir="app/src/main/res/anim"/>
+		<source-file src="src/android/res/anim/umeng_socialize_shareboard_animation_in.xml" target-dir="app/src/main/res/anim"/>
+		<source-file src="src/android/res/anim/umeng_socialize_shareboard_animation_out.xml" target-dir="app/src/main/res/anim"/>
+		<source-file src="src/android/res/anim/umeng_socialize_slide_in_from_bottom.xml" target-dir="app/src/main/res/anim"/>
+		<source-file src="src/android/res/anim/umeng_socialize_slide_out_from_bottom.xml" target-dir="app/src/main/res/anim"/>
+		
+		<source-file src="src/android/res/drawable/umeng_socialize_back_icon.png" target-dir="app/src/main/res/drawable"/>
+		<source-file src="src/android/res/drawable/umeng_socialize_btn_bg.xml" target-dir="app/src/main/res/drawable"/>
+		<source-file src="src/android/res/drawable/umeng_socialize_copy.png" target-dir="app/src/main/res/drawable"/>
+		<source-file src="src/android/res/drawable/umeng_socialize_copyurl.png" target-dir="app/src/main/res/drawable"/>
+		<source-file src="src/android/res/drawable/umeng_socialize_delete.png" target-dir="app/src/main/res/drawable"/>
+		<source-file src="src/android/res/drawable/umeng_socialize_edit_bg.xml" target-dir="app/src/main/res/drawable"/>
+		<source-file src="src/android/res/drawable/umeng_socialize_fav.png" target-dir="app/src/main/res/drawable"/>
+		<source-file src="src/android/res/drawable/umeng_socialize_menu_default.png" target-dir="app/src/main/res/drawable"/>
+		<source-file src="src/android/res/drawable/umeng_socialize_more.png" target-dir="app/src/main/res/drawable"/>
+		<source-file src="src/android/res/drawable/umeng_socialize_qq.png" target-dir="app/src/main/res/drawable"/>
+		<source-file src="src/android/res/drawable/umeng_socialize_qzone.png" target-dir="app/src/main/res/drawable"/>
+		<source-file src="src/android/res/drawable/umeng_socialize_share_music.png" target-dir="app/src/main/res/drawable"/>
+		<source-file src="src/android/res/drawable/umeng_socialize_share_video.png" target-dir="app/src/main/res/drawable"/>
+		<source-file src="src/android/res/drawable/umeng_socialize_share_web.png" target-dir="app/src/main/res/drawable"/>
+		<source-file src="src/android/res/drawable/umeng_socialize_sina.png" target-dir="app/src/main/res/drawable"/>
+		<source-file src="src/android/res/drawable/umeng_socialize_wechat.png" target-dir="app/src/main/res/drawable"/>
+		<source-file src="src/android/res/drawable/umeng_socialize_wxcircle.png" target-dir="app/src/main/res/drawable"/>
+		<source-file src="src/android/res/drawable/wechat_fav.png" target-dir="app/src/main/res/drawable"/>
+		<source-file src="src/android/res/drawable/weibosdk_common_shadow_top.9.png" target-dir="app/src/main/res/drawable"/>
+		<source-file src="src/android/res/drawable/weibosdk_empty_failed.png" target-dir="app/src/main/res/drawable"/>
+		
+		<source-file src="src/android/res/drawable-hdpi/umeng_socialize_light_bar_bg_pad.9.png" target-dir="app/src/main/res/drawable-hdpi"/>
+		<source-file src="src/android/res/drawable-hdpi/umeng_socialize_nav_bar_bg_pad.9.png" target-dir="app/src/main/res/drawable-hdpi"/>
+		<source-file src="src/android/res/drawable-hdpi/umeng_socialize_oauth_check_off.png" target-dir="app/src/main/res/drawable-hdpi"/>
+		<source-file src="src/android/res/drawable-hdpi/umeng_socialize_oauth_check_on.png" target-dir="app/src/main/res/drawable-hdpi"/>
+		
+		<source-file src="src/android/res/layout/socialize_share_menu_item.xml" target-dir="app/src/main/res/layout"/>
+		<source-file src="src/android/res/layout/umeng_socialize_oauth_dialog.xml" target-dir="app/src/main/res/layout"/>
+		<source-file src="src/android/res/layout/umeng_socialize_share.xml" target-dir="app/src/main/res/layout"/>
+		
+		<source-file src="src/android/res/values/umeng_socialize_colors.xml" target-dir="app/src/main/res/values"/>
+		<source-file src="src/android/res/values/umeng_socialize_strings.xml" target-dir="app/src/main/res/values"/>
+		<source-file src="src/android/res/values/umeng_socialize_style.xml" target-dir="app/src/main/res/values"/>
+			
+		<lib-file src="src/android/libs/SocialSDK_QQ_Simplify.jar" />
+		<lib-file src="src/android/libs/SocialSDK_Sina_Simplify.jar" />
+		<lib-file src="src/android/libs/SocialSDK_WeChat_Simplify.jar" />
+		<lib-file src="src/android/libs/umeng_shareboard_widget.jar" />
+		<lib-file src="src/android/libs/umeng_social_api.jar" />
+		<lib-file src="src/android/libs/umeng_social_net.jar" />
+		<lib-file src="src/android/libs/umeng_social_shareboard.jar" />
+		<lib-file src="src/android/libs/umeng_social_shareview.jar" />
+		<lib-file src="src/android/libs/umeng_social_tool.jar" />
+	
+    </platform>
+  
+</plugin>
