@@ -6,6 +6,11 @@
 - 2、Java 7 及以上版本：[jdk下载与安装配置教程](https://blog.csdn.net/u012934325/article/details/73441617)
 - 3、node.js 3.10.10及以上版本：[node.js与cordova下载与安装教程](https://blog.csdn.net/weixin_37730482/article/details/74388056)
 ## 三、快速开发
+### 请有Android开发基础的工程师进行开发
+### 请有Android开发基础的工程师进行开发
+### 请有Android开发基础的工程师进行开发
+### 重要的事情说三遍
+
 [Android快速开发自定义cordova插件文档](https://github.com/nihaohebin/CordovaPluginDevelopment/blob/master/%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E4%B8%8E%E5%AE%89%E8%A3%85.md)
 ## 四、已配置好的插件开发Android工程环境
 [开发Android插件工程下载](https://github.com/nihaohebin/CordovaPluginDevelopment.git)
