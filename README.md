@@ -7,8 +7,8 @@
 - 3、node.js 3.10.10及以上版本：[node.js与cordova下载与安装教程](https://blog.csdn.net/weixin_37730482/article/details/74388056)
 - 4、开发要求：必须有一定android开发基础
 ## 三、快速开发
-[Android插件快速开发](./插件开发与安装.md)
-[plugin.xml文件快速配置](./插件plugin配置规范模板.md)
+- [Android插件快速开发](./插件开发与安装.md)
+- [plugin.xml文件快速配置](./插件plugin配置规范模板.md)
 ## 四、已配置好的Android工程环境（用于开发Android Cordova插件包）
 - 下载该工程，使用AndroidStudio 3.0及以上版本打开进行开发即可
 ## 五、注意事项
