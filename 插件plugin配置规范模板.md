@@ -121,10 +121,13 @@
         <!-- res资源，target-dir为app/src/main/res/ + 资源目录-->
         <source-file src="src/android/LibraryProject/res/drawable/toone_office_camera2.xml" target-dir="app/src/main/res/drawable"/>
         <source-file src="src/android/LibraryProject/res/drawable/toone_office_camera.png" target-dir="app/src/main/res/drawable-hdpi"/>
+     
         <!---布局文件-->
         <source-file src="src/android/LibraryProject/res/layout/activity_toone_office_cameraxml" target-dir="app/src/main/res/layout"/>
+     
         <!-- -音频文件 -->
         <source-file src="src/android/LibraryProject/res/raw/toone_office_beep.ogg" target-dir="app/src/main/res/raw"/>
+      
         <!---value文件-->
         <source-file src="src/android/LibraryProject/res/values/toone_office_colors.xml" target-dir="app/src/main/res/values"/>
         <source-file src="src/android/LibraryProject/res/values/toone_office_theme.xml" target-dir="app/src/main/res/values"/>
@@ -132,7 +135,7 @@
         <source-file src="src/android/LibraryProject/res/values/toone_officec_strings.xml" target-dir="app/src/main/res/values"/>
         <!--注意：仔细检查 source-file 无重复资源导入-->
     
-        <!--第二种导入方式-->
+        <!--第二种资源导入方式-->
         <resource-file src="src/android/res/drawable-hdpi/toone_traffic_actionbar_divider.png" target="res/drawable-hdpi/toone_traffic_actionbar_divider.png" />
         <resource-file src="src/android/res/layout/toone_traffic_popwin_layout.xml"  target="res/layout/toone_traffic_layout.xml" />
 
