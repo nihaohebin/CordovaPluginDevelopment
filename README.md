@@ -7,15 +7,15 @@
 - 3、node.js 3.10.10及以上版本：[node.js与cordova下载与安装教程](https://blog.csdn.net/weixin_37730482/article/details/74388056)
 - 4、开发要求：必须有一定android开发基础
 ## 三、快速开发
-[Android快速开发自定义cordova插件文档](./插件开发与安装.md)
+[Android插件快速开发](./插件开发与安装.md)
+[plugin.xml文件快速配置](./插件plugin配置规范模板.md)
 ## 四、已配置好的Android工程环境（用于开发Android Cordova插件包）
 - 下载该工程，使用AndroidStudio 3.0及以上版本打开进行开发即可
 ## 五、注意事项
 - 1、命名文件目录等，禁止出现中文和空格
-- 2、plugin.xml配置规范模板：[快速配置plugin.xml文件](./插件plugin配置规范模板.md)
-- 3、plugin.xml配置dependency时，请检查源工程已有的插件清单，避免冲突：[已有插件清单查询](./源工程插件清单.md)
-- 4、plugin.xml配置lib-file和framework时，请检查源工程已有的jar包清单，避免冲突：[已有jar包清单查询](./源工程第三方jar包清单.md)
-- 5、开发环境的**包名**要与打包平台创建的**包名**一致，以免一些.R文件因包名不一致，导致打包失败。善用FakeR来动态导入R文件。
+- 2、plugin.xml配置dependency时，请检查源工程已有的插件清单，避免冲突：[已有插件清单查询](./源工程插件清单.md)
+- 3、plugin.xml配置lib-file和framework时，请检查源工程已有的jar包清单，避免冲突：[已有jar包清单查询](./源工程第三方jar包清单.md)
+- 4、开发环境的**包名**要与打包平台创建的**包名**一致，以免一些.R文件因包名不一致，导致打包失败。善用FakeR来动态导入R文件,工具在该工程源码中。
 ## 六、附录
 - 1、plugin.xml文件详细配置介绍：
 [plugin.xml 配置详解](./插件plugin配置介绍.md)
