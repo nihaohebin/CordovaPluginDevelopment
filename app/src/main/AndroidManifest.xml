@@ -15,7 +15,6 @@
         android:resizeable="true"
         android:smallScreens="true"
         android:xlargeScreens="true"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:hardwareAccelerated="true"
         android:icon="@drawable/icon"
@@ -33,9 +32,5 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.synconset.MultiImageChooserActivity"
-            android:label="@string/multi_app_name"
-            android:theme="@android:style/Theme.Holo.Light"/>
     </application>
 </manifest>
