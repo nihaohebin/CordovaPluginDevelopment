@@ -24,9 +24,6 @@
     <feature name="AppVersion">
         <param name="android-package" value="uk.co.whiteoctober.cordova.AppVersion" />
     </feature>
-    <feature name="Device">
-        <param name="android-package" value="org.apache.cordova.device.Device" />
-    </feature>
 
     <!--<preference name="webView" value="org.apache.cordova.x5.X5WebViewEngine" />-->
     <!--<preference name="appUserAgent" value="appX5" />-->
