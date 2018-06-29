@@ -1,5 +1,0 @@
-1、https://www.jiguang.cn/  极光推送官网注册登录
-2、登陆成功后 → 点击开发者服务 → 点击极光推送 → 立即体验 → 创建应用 → 上传应用名称和图标 → 创建（获取APP_KEY） → 点击完成推送配置 → 填入打包的包名
-3、上传极光推送插件 → 开启插件填入获取的APP_KEY → 打包 → 安装使用（在极光推送平台推送信息测试）
-
-https://github.com/jpush/jpush-phonegap-plugin

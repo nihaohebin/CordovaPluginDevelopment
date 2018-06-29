@@ -1,5 +1,0 @@
-
-1、打开新的activity 启动加载
- 
- 
-cordova.plugins.webview.open();
