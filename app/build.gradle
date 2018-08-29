@@ -137,6 +137,14 @@ task cdvPrintProps << {
 }
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'toone123'
+            keyPassword 'toone123'
+            storeFile file('helloworld.jks')
+            storePassword 'toone123'
+        }
+    }
     defaultConfig {
         applicationId privateHelpers.extractStringFromManifest("package")
         if (cdvMinSdkVersion != null) {
@@ -144,6 +152,9 @@ android {
         }
         minSdkVersion 19
         targetSdkVersion 25
+        versionCode 1
+        versionName '1.0.0'
+        signingConfig signingConfigs.config
     }
     sourceSets {
         main {
@@ -227,6 +238,14 @@ android {
     }
     productFlavors {
     }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.config
+        }
+        release {
+            signingConfig signingConfigs.config
+        }
+    }
 }
 
 /*
@@ -241,6 +260,7 @@ dependencies {
     // SUB-PROJECT DEPENDENCIES START
     implementation project(path: ':CordovaLib')
     // SUB-PROJECT DEPENDENCIES END
+    implementation 'com.android.support:appcompat-v7:25.4.0'
 }
 
 def promptForReleaseKeyPassword() {
