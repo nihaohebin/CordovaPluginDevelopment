@@ -21,10 +21,4 @@
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
-    <feature name="AppVersion">
-        <param name="android-package" value="uk.co.whiteoctober.cordova.AppVersion" />
-    </feature>
-
-    <!--<preference name="webView" value="org.apache.cordova.x5.X5WebViewEngine" />-->
-    <!--<preference name="appUserAgent" value="appX5" />-->
 </widget>
