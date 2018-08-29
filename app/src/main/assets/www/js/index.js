@@ -28,10 +28,7 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
-        var success = function(data){
-                  console.log("appName = " + data);
-             }
-            cordova.getAppVersion.getAppName(success);
+
     },
 
     // Update DOM on a Received Event
