@@ -1,19 +1,12 @@
-#### 源工程已有jar包
+#### 源工程已引用jar包
 ```
-//noinspection GradleDependency,GradleCompatible
-implementation 'com.android.support:support-v4:23.1.1'
-//图片压缩luban
-implementation 'io.reactivex:rxjava:1.1.6'
-implementation 'io.reactivex:rxandroid:1.2.1'
-//noinspection GradleDependency,GradleCompatible
-implementation 'com.android.support:multidex:1.0.2'
+implementation 'com.android.support:appcompat-v7:27.1.1'
+implementation 'com.android.support:multidex:1.0.3'
 implementation 'com.google.code.gson:gson:2.8.2'
-implementation 'com.squareup.okhttp3:okhttp:3.9.0'
-implementation 'com.google.zxing:core:3.0.1'
-//听云
+implementation 'com.google.zxing:core:3.2.0'
+implementation 'com.squareup.okhttp3:okhttp:3.9.1'
+implementation 'com.networkbench.newlens.agent.android:nbs.newlens.agent:2.10.1'
 //noinspection GradleDependency
-implementation 'com.networkbench.newlens.agent.android:nbs.newlens.agent:2.8.3'
-//图像处理
 implementation 'com.github.bumptech.glide:glide:3.8.0'
 
 //友盟
