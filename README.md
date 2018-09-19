@@ -13,8 +13,8 @@
 - 下载该工程，使用AndroidStudio 3.0及以上版本打开进行开发即可
 ## 五、注意事项
 - 1、命名文件目录等，禁止出现中文和空格
-- 2、plugin.xml配置dependency时，请检查源工程已有的插件清单，避免冲突：[已有插件清单查询](./源工程插件清单.md)
-- 3、plugin.xml配置lib-file和framework时，请检查源工程已有的jar包清单，避免冲突：[已有jar包清单查询](./源工程第三方jar包清单.md)
+- 2、plugin.xml配置dependency标签时，请检查源工程已有的插件清单，避免冲突：[已有插件清单查询](./源工程插件清单.md)
+- 3、plugin.xml配置lib-file和framework标签时，请检查源工程已有的jar包清单，避免冲突：[已有jar包清单查询](./源工程第三方jar包清单.md)
 - 4、开发环境的**包名**要与打包平台创建的**包名**一致，以免一些.R文件因包名不一致，导致打包失败。善用[FakeR](./app/src/main/java/com/toone/hello/FakeR.java)来动态导入R文件,工具在该工程源码中。
 ## 六、附录
 - 1、plugin.xml文件详细配置介绍：
