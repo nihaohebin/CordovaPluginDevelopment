@@ -22,3 +22,4 @@
 - 2、config.xml文件详细配置介绍：
 [config.xml 配置详解](./插件config配置介绍.md)
 - 3、java 和 js 文件详细开发介绍：[   java 和 js 详细开发文档](http://cordova.axuer.com/docs/zh-cn/latest/guide/platforms/android/plugin.html)
+## 七、已停止维护
